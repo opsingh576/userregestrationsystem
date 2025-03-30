@@ -2,11 +2,20 @@ spring:
   application:
     name: userregistrationsystem
   datasource:
-    url: jdbc:mysql://localhost:3306/registration?createDatabaseIfNotExist=true
-    username : root
-    password : manager
-  jpa:
-    show-sql : true
-    hibernate :
-      ddl-auto : update
+#    url: jdbc:mysql://localhost:3306/registration?createDatabaseIfNotExist=true
+#    username : root
+#    password : manager
+#  jpa:
+#    show-sql : true
+#    hibernate :
+#      ddl-auto : create
+
+    url: jdbc:h2:mem:registrations
+    username: sa
+  h2:
+    console:
+       enabled: true
+       setting:
+         web-allow-others: true
+
 
