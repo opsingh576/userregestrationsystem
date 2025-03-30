@@ -12,7 +12,8 @@ public class UserRegistrationHandler {
     @ExceptionHandler(SQLIntegrityConstraintViolationException.class)
     public ResponseEntity<String> sQLIntegrityConstraintViolationException(SQLIntegrityConstraintViolationException sqlException)
     {
-        System.out.println("newly added line");
+        System.out.println("newly added line"); //second
+        System.out.println("third commit");
         return new ResponseEntity<String>(sqlException.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }
